@@ -60,10 +60,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6480b707e4182848aec4fc4c7f8f3e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DoorU: {fileID: 3743719621842142811}
-  DoorR: {fileID: 1791703118070452124}
-  DoorD: {fileID: 2292119653746769630}
-  DoorL: {fileID: 7290882351458790875}
+  DoorU: {fileID: 1791703118070452124}
+  DoorR: {fileID: 2292119653746769630}
+  DoorD: {fileID: 7290882351458790875}
+  DoorL: {fileID: 3743719621842142811}
   BlockMeshes: []
 --- !u!1001 &4280036545234954
 PrefabInstance:

@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638166401685987438
-    m_Hash: 3484128754
+      ticks: 638167423756162251
+    m_Hash: 3569984661
   m_LockFileStatus:
     m_FilePath: "C:/Users/obikf/OneDrive/\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B/GitHub/rogue/Rogue/Packages/packages-lock.json"
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638166402047229500
-    m_Hash: 2491040618
+      ticks: 638167423756172261
+    m_Hash: 709160674
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:

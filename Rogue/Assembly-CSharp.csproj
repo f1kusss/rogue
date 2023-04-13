@@ -59,6 +59,8 @@
     <Compile Include="Assets\ChunkPlacer.cs" />
     <Compile Include="Assets\FollowCamera.cs" />
     <Compile Include="Assets\Move.cs" />
+    <Compile Include="Assets\RoomsPlacer.cs" />
+    <Compile Include="Assets\Room.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Chunk.cs" />
   </ItemGroup>

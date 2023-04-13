@@ -357,6 +357,8 @@
 "Assets/ChunkPlacer.cs"
 "Assets/FollowCamera.cs"
 "Assets/Move.cs"
+"Assets/Room.cs"
+"Assets/RoomsPlacer.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 

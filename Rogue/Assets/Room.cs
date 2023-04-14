@@ -2,10 +2,26 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
+    public int EnemyCount;
     public GameObject DoorU;
     public GameObject DoorR;
     public GameObject DoorD;
-    public GameObject DoorL; 
+    public GameObject DoorL;
+    Component[] Rigids;
+    GameObject[] Alo;
+
+
+    private void Start()
+    {
+        Rigids = GetComponentsInChildren<Transform>();
+        foreach (Component component in Rigids)
+        {
+            if (component.gameObject.name == "skeleton_enemy") // Если объект неактивен
+            {
+                EnemyCount += 1;
+            }
+        }
+    }
 
     public void RotateRandomly()
     {
@@ -22,4 +38,9 @@ public class Room : MonoBehaviour
             DoorU = tmp;
         }
     }
+    //public void Update()
+    //{
+        //Rigids = GetComponentsInChildren<Transform>();
+        
+    //}
 }

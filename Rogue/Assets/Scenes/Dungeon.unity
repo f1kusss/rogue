@@ -1078,6 +1078,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6480b707e4182848aec4fc4c7f8f3e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EnemyCount: 0
   DoorU: {fileID: 1791703117684017589}
   DoorR: {fileID: 2292119653596330231}
   DoorD: {fileID: 7290882351273683954}

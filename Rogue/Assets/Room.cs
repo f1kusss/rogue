@@ -5,9 +5,7 @@ public class Room : MonoBehaviour
     public GameObject DoorU;
     public GameObject DoorR;
     public GameObject DoorD;
-    public GameObject DoorL;
-
-    public Mesh[] BlockMeshes;
+    public GameObject DoorL; 
 
     public void RotateRandomly()
     {

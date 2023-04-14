@@ -5,30 +5,33 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float Speed;
-    public List<Transform> PatrolPoints;
-    int Iterator;
-
+    public Room Room;
+    public Transform PatrolPoints;
+    GameObject Player;
     Rigidbody rigidbody;
 
     void Start()
     {
-        Iterator = 0;
-
+        Player = GameObject.Find("character_mage");
         rigidbody = GetComponent<Rigidbody>();
+        PatrolPoints = Player.GetComponent<Transform>();
     }
 
     void Update()
     {
-        if ((PatrolPoints[Iterator].position - transform.position).magnitude < 1) 
+        Vector3 Playerpos = PatrolPoints.position;
+        Vector3 DoorUPos = Room.DoorU.transform.position;
+        Vector3 DoorDPos = Room.DoorD.transform.position;
+        Vector3 DoorLPos = Room.DoorL.transform.position;
+        Vector3 DoorRPos = Room.DoorR.transform.position;
+        if (Playerpos.z < DoorUPos.z && Playerpos.x < DoorRPos.x && Playerpos.z > DoorDPos.z && Playerpos.x > DoorLPos.x)
         {
-            Iterator++;
-            Iterator %= PatrolPoints.Count;
+            Vector3 movementVector = PatrolPoints.position - transform.position;
+            movementVector.Normalize();
+
+            rigidbody.velocity = movementVector * Speed;
+            transform.LookAt(PatrolPoints.position);
         }
-
-        Vector3 movementVector = PatrolPoints[Iterator].position - transform.position;
-        movementVector.Normalize();
-
-        rigidbody.velocity = movementVector * Speed;
-        transform.LookAt(PatrolPoints[Iterator].position);
+        
     }
 }

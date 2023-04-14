@@ -20,7 +20,7 @@ public class RoomsPlacer : MonoBehaviour
         for (int i = 0; i < 12; i++)
         {
             // Это вот просто убрать чтобы подземелье генерировалось мгновенно на старте
-            yield return new WaitForSecondsRealtime(0.1f);
+            yield return new WaitForSecondsRealtime(0.01f);
 
             PlaceOneRoom();
         }
@@ -58,7 +58,7 @@ public class RoomsPlacer : MonoBehaviour
 
             if (ConnectToSomething(newRoom, position))
             {
-                newRoom.transform.position = new Vector3(position.x - 5, 0, position.y - 5) * 13;
+                newRoom.transform.position = new Vector3(position.x - 5, 0, position.y - 5) * 12;
                 spawnedRooms[position.x, position.y] = newRoom;
                 return;
             }

@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour
 
     void Start()
     {
-        Player = GameObject.Find("character_mage");
+        Player = GameObject.Find("Mage");
         rigidbody = GetComponent<Rigidbody>();
         PatrolPoints = Player.GetComponent<Transform>();
     }

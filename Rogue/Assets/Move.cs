@@ -1,30 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
-public class Move : MonoBehaviour
+using System.Collections;
+public class Move : MonoBehaviour 
 {
-    public float moveSpeed = 15f; // скорость движения
-    public Rigidbody rb; // Rigidbody объекта
+public GameObject player;
+public int speedRotation = 10;
+public int speed = 5;
+public int jumpSpeed = 50;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-    }
-
-    void FixedUpdate()
-    {
-
-        // Получаем текущую скорость Rigidbody
-
-        // Ограничиваем скорость в заданных пределах
-
-        // Применяем измененную скорость обратно в Rigidbody
-
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
-
-        Vector3 movement = new Vector3(moveHorizontal, 0f, moveVertical);
-        rb.velocity = movement * moveSpeed;
-    }
+void Start () { 
+  player = (GameObject)this.gameObject; 
+  }
+  void Update(){
+if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) 
+  { 
+  player.transform.position += player.transform.forward * speed * Time.deltaTime; 
+  } 
+if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) 
+  { 
+  player.transform.position -= player.transform.forward * speed * Time.deltaTime; 
+  } 
+if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) 
+  { 
+  player.transform.Rotate(Vector3.down * speedRotation); 
+  } 
+  if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) 
+  { 
+  player.transform.Rotate(Vector3.up * speedRotation); 
+  } 
+if (Input.GetKeyDown(KeyCode.Space)) 
+  { 
+  player.transform.position += player.transform.up * jumpSpeed * Time.deltaTime; 
+  } 
+ }
 }

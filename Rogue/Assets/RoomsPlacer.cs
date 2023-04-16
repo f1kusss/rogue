@@ -8,19 +8,17 @@ public class RoomsPlacer : MonoBehaviour
 {
     public Room[] RoomPrefabs;
     public Room StartingRoom;
-
     private Room[,] spawnedRooms;
+    
 
-    private IEnumerator Start()
+    private void Start()
     {
-        
         spawnedRooms = new Room[11, 11];
         spawnedRooms[5, 5] = StartingRoom;
 
         for (int i = 0; i < 12; i++)
         {
             // Это вот просто убрать чтобы подземелье генерировалось мгновенно на старте
-            yield return new WaitForSecondsRealtime(0.01f);
 
             PlaceOneRoom();
         }
@@ -87,7 +85,7 @@ public class RoomsPlacer : MonoBehaviour
         if (selectedDirection == Vector2Int.up)
         {
             room.DoorU.SetActive(false);
-            selectedRoom.DoorD.SetActive(false);
+            selectedRoom.DoorD.SetActive(false);        
         }
         else if (selectedDirection == Vector2Int.down)
         {

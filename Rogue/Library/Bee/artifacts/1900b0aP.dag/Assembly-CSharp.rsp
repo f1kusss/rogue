@@ -304,11 +304,18 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.Flow.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.State.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/UnityEngine.UI.ref.dll"
+"Assets/attack/AttributesManager.cs"
+"Assets/attack/DamagePopUpGenerator.cs"
+"Assets/attack/DamageTester.cs"
 "Assets/Enemy.cs"
+"Assets/Enemy/AttackScript.cs"
+"Assets/Enemy/DamageScript.cs"
+"Assets/Enemy/EnemyScript.cs"
 "Assets/FollowCamera.cs"
 "Assets/Move.cs"
 "Assets/Room.cs"
 "Assets/RoomsPlacer.cs"
+"Assets/SimpleCamera.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0
 

@@ -2,10 +2,13 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
+    public int EnemyCount;
     public GameObject DoorU;
     public GameObject DoorR;
     public GameObject DoorD;
-    public GameObject DoorL; 
+    public GameObject DoorL;
+    public Component[] Rigids;
+    Component[] Alo;
 
     public void RotateRandomly()
     {

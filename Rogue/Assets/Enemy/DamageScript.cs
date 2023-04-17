@@ -8,7 +8,7 @@ public class DamageScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Enemy");
+        if (other.tag == "Enemy")
         {
             other.GetComponent<EnemyScript>().TakeDamage(damageAmount);
         }

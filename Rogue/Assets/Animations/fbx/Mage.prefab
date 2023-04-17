@@ -376,7 +376,6 @@ MonoBehaviour:
   player: {fileID: 0}
   speedRotation: 3
   speed: 5
-  anima: {fileID: 0}
   jumpSpeed: 50
 --- !u!114 &7101386147308201366
 MonoBehaviour:
@@ -955,6 +954,9 @@ GameObject:
   m_Component:
   - component: {fileID: 5298656958844991914}
   - component: {fileID: 2203040791023658018}
+  - component: {fileID: 1237629772850052857}
+  - component: {fileID: 855685238550734716}
+  - component: {fileID: 5939140331406559588}
   m_Layer: 0
   m_Name: Mage
   m_TagString: Untagged
@@ -999,6 +1001,48 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1237629772850052857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002078821972199882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c66971b1bd1d97a41a462bf76bdeebb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8002078821972199882}
+  speedRotation: 2
+  speed: 7
+  jumpSpeed: 50
+--- !u!114 &855685238550734716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002078821972199882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb5cb1f882cf8c248b7e83ac9b3eaa27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 5
+  health: 100
+--- !u!114 &5939140331406559588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8002078821972199882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06ce01e2f38a5254fb7baf38dad7de79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9023203928606016402
 GameObject:
   m_ObjectHideFlags: 0

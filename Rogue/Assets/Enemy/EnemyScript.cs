@@ -21,7 +21,7 @@ public class EnemyScript : MonoBehaviour
         if(HP <= 0)
         {
             animator.SetTrigger("death");
-            GetComponent<Collider>().enabled = false;
+            GetComponent<Collider>().gameObject.SetActive(false);
             healthBar.gameObject.SetActive(false);
         }
         else

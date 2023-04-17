@@ -11,7 +11,7 @@ public class RoomsPlacer : MonoBehaviour
 
     private Room[,] spawnedRooms;
 
-    private IEnumerator Start()
+    private void  Start()
     {
         
         spawnedRooms = new Room[11, 11];
@@ -20,7 +20,6 @@ public class RoomsPlacer : MonoBehaviour
         for (int i = 0; i < 12; i++)
         {
             // Это вот просто убрать чтобы подземелье генерировалось мгновенно на старте
-            yield return new WaitForSecondsRealtime(0.01f);
 
             PlaceOneRoom();
         }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class SimpleCamera : MonoBehaviour
 {
     public Transform target;
-    public float speed = 4f;
+    public float speed = 1f;
 
 
     private Vector3 _position;
@@ -19,7 +19,7 @@ public class SimpleCamera : MonoBehaviour
     void Update()
     {
         var currentPosition = target.TransformPoint(_position);
-        transform.position = Vector3.Lerp(transform.position, currentPosition, speed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, currentPosition, 4f * Time.deltaTime);
         transform.LookAt(target);
         var currentRotation = Quaternion.LookRotation(target.position - transform.position);
         transform.rotation = Quaternion.Lerp(transform.rotation, currentRotation, speed * Time.deltaTime);

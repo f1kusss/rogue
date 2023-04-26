@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\attack\AttributesManager.cs" />
     <Compile Include="Assets\FollowCamera.cs" />
+    <Compile Include="Assets\PlayGame.cs" />
     <Compile Include="Assets\Move.cs" />
     <Compile Include="Assets\Enemy\EnemyScript.cs" />
     <Compile Include="Assets\SimpleCamera.cs" />

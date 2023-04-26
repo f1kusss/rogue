@@ -362,6 +362,7 @@
 "Assets/Enemy/EnemyScript.cs"
 "Assets/FollowCamera.cs"
 "Assets/Move.cs"
+"Assets/PlayGame.cs"
 "Assets/Room.cs"
 "Assets/RoomsPlacer.cs"
 "Assets/SimpleCamera.cs"

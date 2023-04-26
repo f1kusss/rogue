@@ -8,7 +8,7 @@ public class Room : MonoBehaviour
     public GameObject DoorD;
     public GameObject DoorL;
     public Component[] Rigids;
-    Component[] Alo;
+    public int[] test;
 
     public void RotateRandomly()
     {

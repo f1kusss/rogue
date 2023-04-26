@@ -9,14 +9,19 @@ ScriptsOnlyBuild:
     - Enemy
     - EnemyScript
     - Move
+    - PlayGame
     - Room
     - RoomsPlacer
     - SimpleCamera
     Unity.AdaptivePerformance.Editor.dll:
     - UnityEditor.AdaptivePerformance.Editor.AdaptivePerformanceGeneralSettingsPerBuildTarget
+    Unity.AdaptivePerformance.Simulator.Editor.dll:
+    - UnityEditor.AdaptivePerformance.Simulator.Editor.SimulatorProviderSettings
     Unity.AdaptivePerformance.dll:
     - UnityEngine.AdaptivePerformance.AdaptivePerformanceGeneralSettings
     - UnityEngine.AdaptivePerformance.AdaptivePerformanceManagerSettings
+    Unity.Mobile.AndroidLogcat.Editor.dll:
+    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
@@ -24,6 +29,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -39,6 +45,7 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
@@ -58,8 +65,11 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
@@ -67,12 +77,16 @@ ScriptsOnlyBuild:
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
     - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.Slider/SliderEvent
     - UnityEngine.UI.SpriteState
-  methodsToPreserve: []
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: PlayGame
+    methodName: Play
   sceneClasses:
     Assets/Scenes/Dungeon.unity:
     - Class: 1
@@ -92,8 +106,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
@@ -118,50 +130,109 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1570}
     - Class: 114
-      Script: {instanceID: 1680}
+      Script: {instanceID: 1622}
     - Class: 114
-      Script: {instanceID: 1894}
+      Script: {instanceID: 1836}
     - Class: 114
-      Script: {instanceID: 2260}
+      Script: {instanceID: 2628}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 3864}
     - Class: 114
-      Script: {instanceID: 3922}
+      Script: {instanceID: 4664}
     - Class: 114
-      Script: {instanceID: 4198}
+      Script: {instanceID: 4708}
     - Class: 114
-      Script: {instanceID: 4448}
+      Script: {instanceID: 4964}
     - Class: 114
-      Script: {instanceID: 4722}
+      Script: {instanceID: 4984}
     - Class: 114
-      Script: {instanceID: 4766}
+      Script: {instanceID: 5010}
     - Class: 114
-      Script: {instanceID: 5022}
+      Script: {instanceID: 5084}
     - Class: 114
-      Script: {instanceID: 5042}
+      Script: {instanceID: 5276}
     - Class: 114
-      Script: {instanceID: 5068}
+      Script: {instanceID: 5634}
     - Class: 114
-      Script: {instanceID: 5142}
+      Script: {instanceID: 5694}
     - Class: 114
-      Script: {instanceID: 5334}
+      Script: {instanceID: 5742}
     - Class: 114
-      Script: {instanceID: 5692}
+      Script: {instanceID: 5788}
     - Class: 114
-      Script: {instanceID: 5752}
+      Script: {instanceID: 6114}
     - Class: 114
-      Script: {instanceID: 5800}
+      Script: {instanceID: 6284}
     - Class: 114
-      Script: {instanceID: 6172}
-    - Class: 114
-      Script: {instanceID: 6342}
-    - Class: 114
-      Script: {instanceID: 7168}
+      Script: {instanceID: 7110}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 137
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Main Menu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1570}
+    - Class: 114
+      Script: {instanceID: 1622}
+    - Class: 114
+      Script: {instanceID: 2202}
+    - Class: 114
+      Script: {instanceID: 2628}
+    - Class: 114
+      Script: {instanceID: 3130}
+    - Class: 114
+      Script: {instanceID: 4140}
+    - Class: 114
+      Script: {instanceID: 4390}
+    - Class: 114
+      Script: {instanceID: 5084}
+    - Class: 114
+      Script: {instanceID: 5634}
+    - Class: 114
+      Script: {instanceID: 5788}
+    - Class: 114
+      Script: {instanceID: 6114}
+    - Class: 114
+      Script: {instanceID: 35144}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -1148,7 +1219,14 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: e621b84ef3a6e7293e5385170af0a7f0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayGame
   platform: 19
   scenePathNames:
+  - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/Dungeon.unity
   playerPath: "D:/Prog/\u0411\u0438\u043B\u0434\u044B/Rogue.exe"

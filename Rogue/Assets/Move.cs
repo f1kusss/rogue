@@ -3,7 +3,7 @@ using System.Collections;
 public class Move : MonoBehaviour 
 {
     public GameObject player;
-    float speedRotation = 2.5f;
+    float speedRotation = 1.5f;
     int speed = 7;
     Rigidbody PlayerRigid;
 

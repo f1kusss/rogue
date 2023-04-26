@@ -8,14 +8,15 @@ public class RoomsPlacer : MonoBehaviour
 {
     public Room[] RoomPrefabs;
     public Room StartingRoom;
-
     private Room[,] spawnedRooms;
+    public HashSet<Vector2Int> vacantPlaces;
 
     private void  Start()
     {
         
         spawnedRooms = new Room[11, 11];
         spawnedRooms[5, 5] = StartingRoom;
+        
 
         for (int i = 0; i < 12; i++)
         {
@@ -27,7 +28,7 @@ public class RoomsPlacer : MonoBehaviour
 
     private void PlaceOneRoom()
     {
-        HashSet<Vector2Int> vacantPlaces = new HashSet<Vector2Int>();
+        vacantPlaces = new HashSet<Vector2Int>();
         for (int x = 0; x < spawnedRooms.GetLength(0); x++)
         {
             for (int y = 0; y < spawnedRooms.GetLength(1); y++)

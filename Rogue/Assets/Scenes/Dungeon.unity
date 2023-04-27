@@ -533,7 +533,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RoomPrefabs:
   - {fileID: 2136315599740178235, guid: 82a04dcb17f4e83438282aec8dc9300c, type: 3}
+  - {fileID: 2136315599740178235, guid: 030a316e00250f840bf6a2604c9d2e0f, type: 3}
+  - {fileID: 2136315599740178235, guid: 522a8d1e10133da44b4f7803addacfd5, type: 3}
   StartingRoom: {fileID: 2136315600059435282}
+  PlacedRooms: []
+  BossRoom: {fileID: 2136315599740178235, guid: cd3142bded3774a44a92da686fdb18fa,
+    type: 3}
+  player: {fileID: 919132148279855866}
+  alo: {fileID: 0}
 --- !u!4 &418299264
 Transform:
   m_ObjectHideFlags: 0
@@ -2603,6 +2610,7 @@ MonoBehaviour:
   DoorD: {fileID: 7290882351273683954}
   DoorL: {fileID: 3743719621489262706}
   Rigids: []
+  test: 
 --- !u!4 &2149846027228029946 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 469711b1fc1584142904de73169c24fa,

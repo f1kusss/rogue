@@ -8,22 +8,29 @@ public class RoomsPlacer : MonoBehaviour
 {
     public Room[] RoomPrefabs;
     public Room StartingRoom;
-    private Room[,] spawnedRooms;
+    public Room[] PlacedRooms;
+    public Room[,] spawnedRooms;
     public HashSet<Vector2Int> vacantPlaces;
+    public Room BossRoom;
+    public GameObject player;
+    Room FarthersRoom;
+    public Room alo;
 
-    private void  Start()
+    private IEnumerator Start()
     {
-        
+        PlacedRooms = new Room[12];
         spawnedRooms = new Room[11, 11];
         spawnedRooms[5, 5] = StartingRoom;
+        Vector3 CordsPlayer = player.transform.position;
         
 
         for (int i = 0; i < 12; i++)
         {
             // Это вот просто убрать чтобы подземелье генерировалось мгновенно на старте
-
+            yield return new WaitForSecondsRealtime(0.001f);
             PlaceOneRoom();
         }
+        PlaceBossRoom(BossRoom, FindFarthestRoom(PlacedRooms, CordsPlayer).transform);
     }
 
     private void PlaceOneRoom()
@@ -47,7 +54,7 @@ public class RoomsPlacer : MonoBehaviour
 
         // Эту строчку можно заменить на выбор комнаты с учётом её вероятности, вроде как в ChunksPlacer.GetRandomChunk()
         Room newRoom = Instantiate(RoomPrefabs[Random.Range(0, RoomPrefabs.Length)]);
-
+        alo = newRoom;
         int limit = 500;
         while (limit-- > 0)
         {
@@ -60,9 +67,19 @@ public class RoomsPlacer : MonoBehaviour
             {
                 newRoom.transform.position = new Vector3(position.x - 5, 0, position.y - 5) * 12;
                 spawnedRooms[position.x, position.y] = newRoom;
+                for (int i = 0; i < 12; i++)
+                {
+                    if (PlacedRooms[i] == null)
+                    {
+                        PlacedRooms[i] = newRoom;
+                        break;
+                    }
+                }
                 return;
             }
         }
+        
+
         newRoom.RotateRandomly();
         Destroy(newRoom.gameObject);
     }
@@ -106,5 +123,59 @@ public class RoomsPlacer : MonoBehaviour
         }
 
         return true;
+    }
+
+    public GameObject FindFarthestRoom(Room[] rooms, Vector3 startPoint)
+    {
+        Transform farthestRoom = null;
+        float maxDistance = 0;
+
+        foreach (Room room in rooms)
+        {
+            float distance = Vector3.Distance(startPoint, room.transform.position);
+            if (distance > maxDistance)
+            {
+                maxDistance = distance;
+                farthestRoom = room.transform;
+                FarthersRoom = room;
+            }
+        }
+
+        return farthestRoom.gameObject;
+    }
+
+    public void PlaceBossRoom(Room bossRoom, Transform cords)
+    {
+
+        
+        GameObject DoorU = FarthersRoom.DoorU;
+        GameObject DoorD = FarthersRoom.DoorD;
+        GameObject DoorR = FarthersRoom.DoorR;
+        GameObject DoorL = FarthersRoom.DoorL;
+        Destroy(FarthersRoom.gameObject);
+        Vector3 Cords = cords.position;
+        Quaternion Rotation = cords.rotation;
+        Room boss = Instantiate(bossRoom);
+        boss.transform.position = Cords;
+        boss.transform.rotation = Rotation;
+        if (DoorU.activeSelf == false)
+        {
+            boss.DoorU.SetActive(false);
+        }
+        else if (DoorD.activeSelf == false)
+        {
+            boss.DoorD.SetActive(false);
+           
+        }
+        else if (DoorR.activeSelf == false)
+        {
+            boss.DoorR.SetActive(false);
+           
+        }
+        else if (DoorL.activeSelf == false)
+        {
+            boss.DoorL.SetActive(false);
+            
+        }
     }
 }

@@ -12,6 +12,8 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         healthBar.value = HP;
+
+       
     }
     
     public void TakeDamage(int damageAmount)
@@ -29,4 +31,5 @@ public class EnemyScript : MonoBehaviour
             animator.SetTrigger("damage");
         }
     }
+
 }

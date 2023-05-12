@@ -12,7 +12,7 @@ public class AttackScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1")) animator.SetBool("attack", true);
-        else if (Input.GetButtonUp("Fire1")) animator.SetBool("attack", false);
+        if (Input.GetButtonDown("Jump")) animator.SetBool("attack", true);
+        else if (Input.GetButtonUp("Jump")) animator.SetBool("attack", false);
     }
 }

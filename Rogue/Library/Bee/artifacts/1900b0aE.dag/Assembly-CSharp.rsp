@@ -358,11 +358,8 @@
 "Assets/attack/DamageTester.cs"
 "Assets/Audio/BGMusic.cs"
 "Assets/Audio/SoundManager.cs"
-"Assets/Enemy/AttackScript.cs"
-"Assets/Enemy/DamageScript.cs"
-"Assets/Enemy/EnemyScript.cs"
-"Assets/Enenmy/Enemy.cs"
-"Assets/Enenmy/PlayerStats.cs"
+"Assets/Enemy/Enemy.cs"
+"Assets/Enemy/PlayerStats.cs"
 "Assets/GenerateRoom/Room.cs"
 "Assets/GenerateRoom/RoomsPlacer.cs"
 "Assets/Joystick Pack/Examples/JoystickPlayerExample.cs"
@@ -381,6 +378,11 @@
 "Assets/SoundEffects.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 "Assets/UI/MainMenu.cs"
+"Assets/WEnemy/AttackScript.cs"
+"Assets/WEnemy/DamageScript.cs"
+"Assets/WEnemy/EnemyScript.cs"
+"Assets/WTestOfAttack/AttackScriptTest.cs"
+"Assets/WTestOfAttack/DamageScriptTest.cs"
 -langversion:9.0
 
 /deterministic

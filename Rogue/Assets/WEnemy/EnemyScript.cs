@@ -21,13 +21,14 @@ public class EnemyScript : MonoBehaviour
 
         if(HP <= 0)
         {
-            animator.SetTrigger("death");
-
+            //animator.SetTrigger("death");
             healthBar.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
         else
         {
-            animator.SetTrigger("damage");
+            //animator.SetTrigger("damage");
+
         }
     }
 

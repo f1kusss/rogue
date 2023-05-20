@@ -1035,7 +1035,7 @@ ScriptsOnlyBuild:
     className: AdaptiveVariableRefreshRate
   - hash:
       serializedVersion: 2
-      Hash: 1d3d75c1ee71cc295872d37725c7c3b2
+      Hash: 15eec6af934af010e63f0dd75705cb99
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -1053,7 +1053,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 238f62a4d3f8c9df299694a644074620
+      Hash: fdd27db7c03d1ed56f6564c2fa8dde2b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AttackScript
@@ -1071,7 +1071,7 @@ ScriptsOnlyBuild:
     className: AspectRatioFitter
   - hash:
       serializedVersion: 2
-      Hash: 38429cd09d9d472b5c730bcc8eabde4c
+      Hash: ef1dece1e481776412348b5f1327bfb5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Room
@@ -1409,4 +1409,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Dungeon.unity
-  playerPath: "C:/Users/savto/OneDrive/Documents/\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430/gamemobilev7.apk"
+  playerPath: "C:/Users/savto/OneDrive/Documents/\u041D\u043E\u0432\u0430\u044F \u043F\u0430\u043F\u043A\u0430/DungeonRoguev2.apk"

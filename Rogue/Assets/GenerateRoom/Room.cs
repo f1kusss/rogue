@@ -1,14 +1,30 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
 
 public class Room : MonoBehaviour
 {
-    public int EnemyCount;
+    public int EnemyCount=>RigidsList.Count;
     public GameObject DoorU;
     public GameObject DoorR;
     public GameObject DoorD;
     public GameObject DoorL;
-    public Component[] Rigids;
-    public int[] test;
+    public List<Transform> RigidsList;
+
+    private void Start()
+    {
+        RigidsList = new List<Transform>();
+        var allObjects = GetComponentsInChildren<Transform>();
+
+        foreach (Transform item in allObjects)
+        {
+            if (item.gameObject.name == "skeleton_enemy")
+            {
+
+                RigidsList.Add(item);
+            }
+        }
+    }
 
     public void RotateRandomly()
     {

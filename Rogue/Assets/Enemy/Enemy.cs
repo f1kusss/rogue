@@ -12,9 +12,9 @@ public class Enemy : MonoBehaviour
     bool LDoor, RDoor, DDoor, UDoor;
     GameObject DoorU, DoorD, DoorR, DoorL;
     Vector3 Playerpos, DoorUPos, DoorDPos, DoorLPos, DoorRPos;
+    Animator animator;
 
-
-    float AttackCooldown = 0;
+    public float AttackCooldown = 3;
     PlayerStats PlayerStats;
 
 
@@ -23,7 +23,7 @@ public class Enemy : MonoBehaviour
         Player = GameObject.Find("Mage");
         rigidbody = GetComponent<Rigidbody>();
         PatrolPoints = Player.GetComponent<Transform>();
-        
+        animator = GetComponent<Animator>();
         DoorUPos = Room.DoorU.transform.position;
         DoorDPos = Room.DoorD.transform.position;
         DoorLPos = Room.DoorL.transform.position;
@@ -43,20 +43,23 @@ public class Enemy : MonoBehaviour
         Playerpos = PatrolPoints.position;
         Vector3 movementVector = PatrolPoints.position - transform.position;
         movementVector.Normalize();
-        transform.LookAt(PatrolPoints.position);
+        
 
         if (PlayerStats)
         {
             if (AttackCooldown <= 0)
             {
-                PlayerStats.ApplyDamage(20);
+                animator.SetBool("attackenemy", true);
+                PlayerStats.ApplyDamage(10);
                 AttackCooldown = 3;
+                animator.SetBool("attackenemy", false);
             }
         }
         else
         if (Playerpos.z + 1 < DoorUPos.z && Playerpos.x + 1 < DoorRPos.x && Playerpos.z - 1 > DoorDPos.z && Playerpos.x - 1 > DoorLPos.x)
         {
             rigidbody.velocity = movementVector * Speed;
+            transform.LookAt(PatrolPoints.position);
             LockDoor();
             
             
@@ -114,7 +117,7 @@ public class Enemy : MonoBehaviour
     }
     private void OnDisable()
     {
-
+        Debug.Log($"UDoor={UDoor} DDoor={DDoor} LDoor={LDoor} RDoor={RDoor}");
         Room.RigidsList.Remove(transform);
         if (Room.EnemyCount > 0)
         {

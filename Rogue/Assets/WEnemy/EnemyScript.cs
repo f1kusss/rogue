@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class EnemyScript : MonoBehaviour
 {
-    private int HP = 100;
+    public int HP = 100;
     public Animator animator;
     public Slider healthBar;
 

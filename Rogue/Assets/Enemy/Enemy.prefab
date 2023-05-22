@@ -333,9 +333,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2457796458538196704}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: a8b722fdb0a3af145aca8215b573fbe9, type: 3}
-  m_Controller: {fileID: 9100000, guid: f8f7a0a67532cf14b985dd3b6bd5ea25, type: 2}
+  m_Controller: {fileID: 9100000, guid: 487bf7da37c05954a8bd27c1f4b893a2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -360,6 +360,7 @@ MonoBehaviour:
   Speed: 1
   Room: {fileID: 0}
   PatrolPoints: {fileID: 0}
+  AttackCooldown: 3
 --- !u!114 &2844930584945993326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -372,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06309c65112e48449bf48fa8fe2a8e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 100
   animator: {fileID: 5754586667989659754}
   healthBar: {fileID: 22486840904578218}
 --- !u!135 &6027537331920189369
@@ -385,7 +387,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
+  m_Radius: 1.2
   m_Center: {x: -0.010399029, y: 0.510406, z: 0.120308995}
 --- !u!1 &2486964395784542219
 GameObject:
@@ -992,7 +994,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5121467852054070500}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: a8b722fdb0a3af145aca8215b573fbe9, type: 3}
   m_Controller: {fileID: 9100000, guid: 487bf7da37c05954a8bd27c1f4b893a2, type: 2}
   m_CullingMode: 1
@@ -1016,6 +1018,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06309c65112e48449bf48fa8fe2a8e41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 100
   animator: {fileID: 1925543482559661092}
   healthBar: {fileID: 22486840904578218}
 --- !u!1 &5247742148252331633
